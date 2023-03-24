@@ -34,10 +34,10 @@ resource "yandex_lb_network_load_balancer" "my-balancer" {
     target_group_id = yandex_lb_target_group.terraform-tg.id
     healthcheck {
       name = "healthcheck"
-        http_options {
-          port = 80
-          path = "/"
-        }
+      http_options {
+        port = 80
+        path = "/"
+      }
     }
   }
 }
